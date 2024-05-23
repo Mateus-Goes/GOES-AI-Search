@@ -73,7 +73,7 @@ Atualmente, consumir a API do ChatGPT tem um custo associado, o que pode limitar
 
 Atualmente, consumir a API do ChatGPT tem um custo associado, o que pode limitar a escalabilidade do projeto GOES AI Search. Para mitigar esses custos e tornar a aplicação mais sustentável a longo prazo, estou estudando mais sobre machine learning e inteligência artificial com o objetivo de implementar uma IA local. Isso permitirá que eu utilize uma IA própria para gerar os resumos dos conteúdos HTML, eliminando a necessidade de usar serviços pagos.
 
-Estou considerando algumas opções de IA open source que podem ser integradas ao projeto. Entre elas estão o **VICUNA**, um modelo de linguagem natural altamente eficiente que pode ser utilizado localmente, e o **LLaMA (Large Language Model Meta AI)**, uma alternativa poderosa desenvolvida pelo Facebook AI Research. Com uma dessas soluções, o GOES AI Search poderá fornecer resumos de maneira mais eficiente e sem custos adicionais, melhorando a viabilidade do projeto a longo prazo.
+Estou considerando algumas opções de IA open source que podem ser integradas ao projeto. Entre elas estão o **VICUNA**, um modelo de linguagem natural eficiente que pode ser utilizado localmente, e o **LLaMA (Large Language Model Meta AI)**, uma alternativa desenvolvida pelo Facebook AI Research. Com uma dessas soluções, o GOES AI Search poderá fornecer resumos de maneira mais eficiente e sem custos adicionais, melhorando a viabilidade do projeto.
 
 
 
