@@ -65,9 +65,6 @@ Este módulo realiza o web scraping dos URLs coletados. Utilizando a biblioteca 
    - O aplicativo exibirá os top 5 resultados da pesquisa do Google, coletará o conteúdo HTML dessas páginas e enviará para o ChatGPT para gerar um resumo.
    - O resumo será exibido na área de texto da interface.
 
-## Melhorias ou Próximos Passos
-
-Atualmente, consumir a API do ChatGPT tem um custo associado, o que pode limitar a escalabilidade do projeto GOES AI Search. Para mitigar esses custos e tornar a aplicação mais sustentável a longo prazo, estou estudando mais sobre machine learning e inteligência artificial com o objetivo de implementar uma IA local. Isso permitirá que eu utilize uma IA própria para gerar os resumos dos conteúdos HTML, eliminando a necessidade de usar serviços pagos.
 
 ## Melhorias ou Próximos Passos
 
