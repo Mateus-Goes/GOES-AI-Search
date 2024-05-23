@@ -2,7 +2,7 @@
 ![GOES Resultado](imgs/goes_resultado.png)
 
 ## Descrição do Projeto
-O GOES-AI-Search é uma aplicação desenvolvida em Python que permite ao usuário realizar pesquisas no Google e obter resumos concisos dos resultados. A aplicação utiliza a API de Pesquisa Personalizada do Google para buscar os melhores 5 resultados de uma consulta, realiza web scraping para extrair o conteúdo relevante dessas páginas e envia o conteúdo para o ChatGPT para gerar um resumo. O projeto combina conceitos de APIs, web scraping e processamento de linguagem natural para proporcionar uma experiência de pesquisa aprimorada.
+O GOES-AI-Search é uma aplicação desenvolvida em Python que permite ao usuário realizar pesquisas no Google e obter resumos concisos dos resultados. A aplicação utiliza a API de Pesquisa Google  para buscar os melhores 5 resultados de uma consulta, ermitindo que o usuário acesse as informações mais relevantes sem precisar abrir o navegador. Após a busca, a aplicação realiza web scraping para extrair o conteúdo essencial dessas páginas  e envia a informação para o ChatGPT, gerando um resumo e retornando o resultado para o usuário. O projeto combina conceitos de APIs, web scraping e processamento de linguagem natural para proporcionar uma experiência de pesquisa otimizada e eficiente.
 
 ## Funcionalidades
 - Interface gráfica para entrada de texto e exibição de resultados.
