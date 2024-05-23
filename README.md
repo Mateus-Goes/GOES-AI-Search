@@ -1,4 +1,5 @@
 # GOES-AI-Search
+![GOES Resultado](imgs/goes_resultado.png)
 
 ## Descrição do Projeto
 O GOES Search Assistant é uma aplicação desenvolvida em Python que permite ao usuário realizar pesquisas no Google e obter resumos concisos dos resultados. A aplicação utiliza a API de Pesquisa Personalizada do Google para buscar os top 5 resultados de uma consulta, realiza web scraping para extrair o conteúdo relevante dessas páginas, e envia o conteúdo para o ChatGPT para gerar um resumo. O projeto combina conceitos de APIs, web scraping e processamento de linguagem natural para proporcionar uma experiência de pesquisa aprimorada.
