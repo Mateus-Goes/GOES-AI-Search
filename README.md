@@ -69,7 +69,12 @@ Este módulo realiza o web scraping dos URLs coletados. Utilizando a biblioteca 
 
 Atualmente, consumir a API do ChatGPT tem um custo associado, o que pode limitar a escalabilidade do projeto GOES AI Search. Para mitigar esses custos e tornar a aplicação mais sustentável a longo prazo, estou estudando mais sobre machine learning e inteligência artificial com o objetivo de implementar uma IA local. Isso permitirá que eu utilize uma IA própria para gerar os resumos dos conteúdos HTML, eliminando a necessidade de usar serviços pagos.
 
-Estou considerando algumas opções de IA open source que podem ser integradas ao projeto. Entre elas estão o **GPT-J**, um modelo de linguagem natural desenvolvido pela EleutherAI que é uma alternativa poderosa e gratuita ao GPT-3; o **BERT**, uma técnica de machine learning desenvolvida pelo Google para o processamento de linguagem natural; e o **T5 (Text-to-Text Transfer Transformer)**, um modelo da Google Research treinado para transformar diversas tarefas de NLP em uma tarefa de tradução de texto. Com uma dessas soluções, o GOES AI Search poderá fornecer resumos de maneira mais eficiente e sem custos adicionais, melhorando a viabilidade do projeto a longo prazo.
+## Melhorias ou Próximos Passos
+
+Atualmente, consumir a API do ChatGPT tem um custo associado, o que pode limitar a escalabilidade do projeto GOES AI Search. Para mitigar esses custos e tornar a aplicação mais sustentável a longo prazo, estou estudando mais sobre machine learning e inteligência artificial com o objetivo de implementar uma IA local. Isso permitirá que eu utilize uma IA própria para gerar os resumos dos conteúdos HTML, eliminando a necessidade de usar serviços pagos.
+
+Estou considerando algumas opções de IA open source que podem ser integradas ao projeto. Entre elas estão o **VICUNA**, um modelo de linguagem natural altamente eficiente que pode ser utilizado localmente, e o **LLaMA (Large Language Model Meta AI)**, uma alternativa poderosa desenvolvida pelo Facebook AI Research. Com uma dessas soluções, o GOES AI Search poderá fornecer resumos de maneira mais eficiente e sem custos adicionais, melhorando a viabilidade do projeto a longo prazo.
+
 
 
 
