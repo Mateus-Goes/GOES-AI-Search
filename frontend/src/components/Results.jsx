@@ -17,16 +17,18 @@ const highlightText = (text, keywords) => {
   );
 };
 
-const Results = ({ summary, keywords }) => (
+const Results = ({ summary, keywords, darkMode }) => (
   <div className="results" style={{ marginTop: 16 }}>
     <div style={{
-      border: '2px solid #222',
+      border: darkMode ? '2px solid #333' : '2px solid #222',
       borderRadius: 6,
-      background: '#f9f9f9',
+      background: darkMode ? '#23272b' : '#f9f9f9',
       padding: '18px 18px 10px 18px',
       marginBottom: 18,
       fontFamily: 'Tahoma, Arial, sans-serif',
-      boxShadow: '1px 2px 0 #bbb',
+      boxShadow: darkMode ? '1px 2px 0 #111' : '1px 2px 0 #bbb',
+      color: darkMode ? '#f5f5f5' : '#222',
+      transition: 'background 0.3s, color 0.3s, border 0.3s',
     }}>
       <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: 8 }}>
         Referências encontradas para sua pesquisa:
@@ -38,7 +40,7 @@ const Results = ({ summary, keywords }) => (
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: '#1a0dab', textDecoration: 'underline', fontSize: '1rem', fontFamily: 'Tahoma, Arial, sans-serif' }}
+              style={{ color: darkMode ? '#7abaff' : '#1a0dab', textDecoration: 'underline', fontSize: '1rem', fontFamily: 'Tahoma, Arial, sans-serif', transition: 'color 0.3s' }}
             >
               Link ({idx + 1}): {link}
             </a>
@@ -49,16 +51,17 @@ const Results = ({ summary, keywords }) => (
         Resumo do ChatGPT baseado nos sites acima:
       </div>
       <div className="summary-text" style={{
-        background: '#fff',
-        border: '1px solid #ccc',
+        background: darkMode ? '#181a1b' : '#fff',
+        border: darkMode ? '1px solid #444' : '1px solid #ccc',
         borderRadius: 5,
         padding: '12px 14px',
         fontSize: '1.05rem',
         minHeight: 52,
         fontFamily: 'Tahoma, Arial, sans-serif',
-        color: '#222',
+        color: darkMode ? '#f5f5f5' : '#222',
+        transition: 'background 0.3s, color 0.3s, border 0.3s',
       }}>
-        {summary ? highlightText(summary, keywords) : <em style={{ color: '#888' }}>No results yet.</em>}
+        {summary ? highlightText(summary, keywords) : <em style={{ color: darkMode ? '#bbb' : '#888' }}>No results yet.</em>}
       </div>
     </div>
   </div>
