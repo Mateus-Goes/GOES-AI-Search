@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# GOES-AI-Search Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Visão Geral
 
-## Available Scripts
+GOES-AI-Search é uma aplicação web moderna e retrô para busca inteligente, integrando pesquisa Google, scraping e sumarização via IA. O frontend é feito em React, com foco em usabilidade, visual retrô estiloso, e experiência de usuário aprimorada.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Funcionalidades Principais
+- **Busca inteligente:** Campo de busca centralizado, com botão estiloso, para pesquisar qualquer termo.
+- **Histórico de buscas:** Barra lateral à esquerda mostra buscas anteriores (simulada, pronto para integração real).
+- **Resultados e referências:** Resultados exibidos em estilo retrô, com destaque para links e sumarização automática.
+- **Dark Mode:** Toggle fixo no topo direito, com transição suave e design elegante.
+- **Logo GOES:** Logo centralizada, grande e com sombra dinâmica para cada tema.
+- **Exportação:** Botão para exportar o resumo gerado (simulado, pronto para integração real).
+- **Responsividade:** Layout adaptável para diferentes tamanhos de tela.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estrutura dos Arquivos Principais
 
-### `npm test`
+- **App.js**
+  - Componente raiz. Gerencia estado global (query, summary, loading, darkMode).
+  - Integra todos os componentes principais.
+  - Controla o tema do body via classe CSS.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **components/GoesLogo.jsx**
+  - Exibe a logo GOES centralizada, com sombra adaptativa (claro/escuro).
+  - Ajuste fino de margens para máxima aproximação com a barra de busca.
 
-### `npm run build`
+- **components/SearchBar.jsx**
+  - Campo de busca e botão "Pesquisar" estilizados.
+  - Suporte a dark mode.
+  - Chama função de busca ao clicar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **components/Results.jsx**
+  - Mostra os links de referência e o resumo gerado pela IA.
+  - Estilo retrô, com destaque para links e caixa de resumo.
+  - Suporte a dark mode.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **components/History.jsx**
+  - Barra lateral de histórico de buscas.
+  - Visual retrô, pronto para integração com backend.
+  - Suporte a dark mode.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **components/ExportButton.jsx**
+  - Botão para exportar o resumo em TXT.
+  - Desabilitado se não houver resumo.
+  - Suporte a dark mode.
 
-### `npm run eject`
+- **components/DarkModeToggle.jsx**
+  - Toggle visual fixo no topo direito, com animação suave e design minimalista.
+  - Sempre visível, independente do conteúdo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **index.css**
+  - Estilos globais do app.
+  - Define temas claro/escuro via classes no body.
+  - Remove margens/paddings extras e garante transições suaves.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Como Rodar o Projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Instale dependências:
+   ```bash
+   npm install
+   ```
+2. Rode o app:
+   ```bash
+   npm start
+   ```
+3. Acesse em [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Documentação dos Componentes Customizados
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `<GoesLogo darkMode={darkMode} />`
+- Props:
+  - `darkMode` (bool): ajusta a sombra do logo conforme o tema.
+- Dica: margens negativas permitem aproximação máxima da SearchBar.
 
-### Code Splitting
+### `<SearchBar query setQuery onSearch loading darkMode />`
+- Props:
+  - `query`, `setQuery`, `onSearch`, `loading`, `darkMode`.
+- Visual retrô, responsivo e adaptado para dark mode.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `<Results summary keywords darkMode />`
+- Props:
+  - `summary`, `keywords`, `darkMode`.
+- Exibe referências e resumo com destaque visual.
 
-### Analyzing the Bundle Size
+### `<History history onSelect darkMode />`
+- Props:
+  - `history`, `onSelect`, `darkMode`.
+- Simula histórico de buscas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### `<ExportButton summary disabled darkMode />`
+- Props:
+  - `summary`, `disabled`, `darkMode`.
+- Exporta o resumo como TXT (simulado).
 
-### Making a Progressive Web App
+### `<DarkModeToggle darkMode setDarkMode />`
+- Props:
+  - `darkMode`, `setDarkMode`.
+- Toggle visual fixo no topo direito, sempre visível.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Estado Atual dos Arquivos
+- **Totalmente funcional:**
+  - App.js, GoesLogo.jsx, SearchBar.jsx, Results.jsx, DarkModeToggle.jsx, index.css
+- **Pronto para integração backend:**
+  - History.jsx, ExportButton.jsx
+- **Assets:**
+  - Logo PNG otimizada, sem áreas transparentes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Próximos Passos Sugeridos
+- Integrar backend FastAPI para busca real e sumarização.
+- Salvar histórico real do usuário.
+- Melhorar responsividade mobile.
+- Adicionar testes automatizados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Contato
+Desenvolvido por Mateus Goes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
